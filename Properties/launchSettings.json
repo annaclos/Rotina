@@ -1,0 +1,8 @@
+﻿{
+  "profiles": {
+    "NFK001": {
+      "commandLineArgs": "2025-03-05",
+      "commandName": "Project"
+    }
+  }
+}
