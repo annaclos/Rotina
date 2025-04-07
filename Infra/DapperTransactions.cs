@@ -49,7 +49,18 @@ namespace NFK001.Infra
         /// <summary>
         /// Rollback
         /// </summary>
-        public void Rollback() => Transaction.Rollback();
+        public void Rollback()
+        {
+            try
+            {
+                Transaction?.Rollback();
+            }
+            catch (Exception ex)
+            {
+                Util.Log($"Erro ao tentar fazer rollback: {ex.Message}", EnTipoLog.Erro);
+            }
+        }
+
 
         /// <summary>
         /// Dispose
